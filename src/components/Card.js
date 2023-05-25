@@ -1,20 +1,18 @@
 import React from 'react';
 import styles from "../styles/Card.module.css";
 import GeoLocation from "@/components/GeoLocation";
+import Link from 'next/link';
+import useNetwork from '@/data/network';
 
-const Card = () => {
+
+const Card = (props) => {
     return(
-        <div className={styles.Container}>
-            <p className={styles.CardNumber}>{}</p>
-            <p className={styles.CardText}>{}</p>
-        </div>
+        <Link href={`/stations/${props.station.id}`}>
+            <div className={styles.Container}>
+                <p className={styles.CardNumber}>{props.station?.name.slice(5)}</p>
+           </div>
+        </Link>
     );
-}
-
-function distanceBetween(){
-    if(stations.name > "50m"){
-
-    }
 }
 
 export default Card;

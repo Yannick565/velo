@@ -34,14 +34,4 @@ export default function Home() {
   }
 
   const stations = network.stations;
-  console.log(stations)
-
-  return (
-    <div>
-      {stations.map(station => 
-        <div key={station.id}>
-          <p href={`/stations/${station.id}`}>{station.name}: {getDistance(location.latitude, location.longitude, station.latitude, station.longitude).distance} m</p>
-        </div>)}
-    </div>
-  )
 }

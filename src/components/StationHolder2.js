@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react';
 import useNetwork from '@/data/network';
 import {getDistance} from '@/utils/getDistance';
 import Link from 'next/link';
+import LijnMeter from "./LijnMeter";
 
 export default function Home() {
   const [filter, setFilter] = useState('');
@@ -37,19 +38,16 @@ export default function Home() {
   });
 
   stations.sort((a, b) => a.distance - b.distance);
-
-  let stations2 = stations.filter(station => station.distance <= 1);
-
+  let stations2 = stations.filter(station => station.distance >= 1 && station.distance <= 5);
   stations2.splice(0,3);
-  
+
   if (stations2.length === 0) {
     stations2 = [{
       name: 'geen stations gevonden'
       }];
-    
   }
-  
-console.log(stations2)
+
+console.log(stations)
 
 return (
   <div className={style.displayHome}>

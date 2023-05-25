@@ -3,7 +3,9 @@ import styles from "../styles/Card.module.css";
 
 const Tussenstuk = () =>{
     return(
-        <div className={styles.TussenstukDiv}><div className={styles.Tussenstuk}></div></div>
+        <div>
+            <div className={styles.TussenstukDiv}><div className={styles.Tussenstuk}></div></div>
+        </div>
     )
 } 
 
