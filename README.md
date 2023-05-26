@@ -4,7 +4,7 @@
 
 **`beschrijving`**
 
-Met deze app kan je [Velo](https://www.velo-antwerpen.be/) stations in province Antwerpen vanuit jouw locatie binnen een straal van 5km bekijken. 
+Met deze app kan je [Velo](https://www.velo-antwerpen.be/) stations in provincie Antwerpen vanuit jouw locatie binnen een straal van 5km bekijken. 
 
 >coding advanced 2022 - 2023
 
