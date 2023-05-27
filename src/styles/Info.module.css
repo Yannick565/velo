@@ -4,7 +4,7 @@
     height: 65vh;
     width: 100%;
     background-color: #FBFBFB;
-    filter: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.100));
+    filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.100));
     border-radius: 6px;
     
 }
@@ -25,16 +25,14 @@
     padding: 16px;
     width: 305px;
     background-color: #FBFBFB;
-    filter: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.100));
+    filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.100));
     border-radius: 6px;
     transition: background-color 0.1s
 }
 
-
 .cardHome p{
     font-size: 12px;
     color: #74B748;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-bottom: 8px;
 }
 
@@ -87,7 +85,7 @@
 }
 
 .bikeAmount{
-    width: 46.5px;
+    width: 45.5px;
     padding: 4px;
     padding-left: 10px;
     padding-right: 10px;
@@ -105,13 +103,13 @@
 }
 
 .bikeAmount p{
+    font-weight: 300;
     text-align: end;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .slotAmount p{
+    font-weight: 300;
     text-align: end;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .lijn{
@@ -151,3 +149,29 @@
     transform: rotate(-45deg);
   }
   
+
+  @media only screen and (min-width: 600px) {
+    .cardHome{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 26px;
+        width: 600px; 
+        background-color: #FBFBFB;
+        filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.100));
+        border-radius: 6px;
+        transition: background-color 0.1s
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .cardHome{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 26px;
+        width: 1200px; 
+        background-color: #FBFBFB;
+        filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.100));
+        border-radius: 6px;
+        transition: background-color 0.1s
+    }
+  }

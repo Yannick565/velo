@@ -13,14 +13,23 @@ import {useState, useEffect, startTransition} from 'react';
 import useNetwork from '@/data/network';
 import {getDistance} from '@/utils/getDistance';
 import {useRouter} from 'next/router';
+import {Poppins} from '@next/font/google';
 
-const roboto = "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', Helvetica Neue, sans-serif";
 const Titelkleur = "#74B748"
+
+
+const poppins = Poppins({
+  subsets:['latin'],
+  style:['normal'],
+  weight:['100','200','300', '400']
+})
 
 export default function App() {
   const [location, setLocation] = useState({});
   const { network, isLoading, isError } = useNetwork();
   const router = useRouter()
+
+  
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -63,12 +72,12 @@ export default function App() {
        <div> 
         <br/>
           <div>
-            <p style={{padding: 5, fontSize: 16, fontFamily: roboto, color: Titelkleur}}>Stations op wandelafstand</p>
+            <p className={poppins.className} style={{padding: 5, fontSize: 16, color: Titelkleur, fontWeight: 600}}>Stations op wandelafstand</p>
             <StationHolder stations={stations}/>
             <LijnMeter/>
           </div>
           <div className={styles.tussenstukCont}>
-            <p style={{padding: 5, fontSize: 16, fontFamily: roboto, color: Titelkleur}}>5 km</p>
+            <p className={poppins.className} style={{padding: 5, fontSize: 16, color: Titelkleur, fontWeight: 600}}>5 km</p>
           <div className={styles.tussenstuk}>
             <Tussenstuk/>
             <Tussenstuk/>
@@ -80,7 +89,7 @@ export default function App() {
             <LijnMeter/>
           </div>
           <div className={styles.tussenstukCont}>
-            <p style={{padding: 5, fontSize: 16, fontFamily: roboto, color: Titelkleur}}>10 km</p>
+            <p className={poppins.className} style={{padding: 5, fontSize: 16, color: Titelkleur, fontWeight: 600}}>10 km</p>
           <div className={styles.tussenstuk}>
             <Tussenstuk/>
             <Tussenstuk/>
@@ -90,7 +99,7 @@ export default function App() {
           <div>
             <StationHolder3 stations={stations}/>
           </div>
-          <em><p style={{padding: 5, fontSize: 12, fontFamily: roboto, color: Titelkleur}}>Verder dan dit zou ik niet gaan...</p></em>
+          <em><p className={poppins.className} style={{padding: 5, fontSize: 12, color: Titelkleur}}>Verder dan dit zou ik niet gaan...</p></em>
         </div>
     </>
   );

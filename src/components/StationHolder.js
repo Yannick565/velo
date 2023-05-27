@@ -3,6 +3,15 @@ import {useState, useEffect} from 'react';
 import useNetwork from '@/data/network';
 import {getDistance} from '@/utils/getDistance';
 import Link from 'next/link';
+import {Poppins} from '@next/font/google';
+
+const poppins = Poppins({
+    subsets:['latin'],
+    style:['normal'],
+    weight:['100','200','300', '400']
+  })
+
+  const black = '#1C2517'
 
 export default function Home() {
   const [filter, setFilter] = useState('');
@@ -58,14 +67,18 @@ return (
         {station.id ? (
           <Link href={`/stations/${station.id}`}>
             <div className={style.cardHome}>
-              <p style={{ fontSize: 15 }} className={style.cardStationName}>{station.name.slice(5)}</p>
-              <p style={{ color: "black" }}>{Math.trunc(station.distance*10)/10} km</p>
+              <div >
+              <p  style={{ fontSize: 15 }} className={style.cardStationName}>{station.name.slice(5)}</p>
+              <p style={{ color: black }}>{Math.trunc(station.distance*10)/10} </p>
+              </div>
             </div>
           </Link>
         ) : (
           <div className={style.cardHome}>
+            <div className={poppins.className}>
             <p style={{ fontSize: 15 }} className={style.cardStationName}>{station.name}</p>
-            <p style={{ color: "black" }}>{station.distance} &#8205;</p>
+            <p style={{ color: black }}>{station.distance} &#8205;</p>
+            </div>
           </div>
         )}
         <div className={style.lijn}></div>

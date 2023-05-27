@@ -1,13 +1,20 @@
 import React from 'react';
 import styles from "../styles/Suggested.module.css";
 import Card from "@/components/Card";
+import {Poppins} from '@next/font/google';
 
-const roboto = "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', Helvetica Neue, sans-serif";
+const poppins = Poppins({
+    subsets:['latin'],
+    style:['normal'],
+    weight:['100','200','300', '400']
+  })
+
+const black = '#1C2517'
 
 const Suggested = (props) => {
     return(
     <div className={styles.Holder}>
-        <p style={{padding: 5, fontSize: 14, fontFamily: roboto}}>Dichtstbijzijnde stations</p>
+        <p className={poppins.className} style={{padding: 5, color:black, fontSize: 14, fontWeight: 600 }}>Dichtstbijzijnde stations</p>
             <Card station={props.stations[0]}/>
             <Card station={props.stations[1]}/>
             <Card station={props.stations[2]}/>
