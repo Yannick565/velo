@@ -6,7 +6,7 @@
     background-color: #FBFBFB;
     filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.100));
     border-radius: 6px;
-    
+    margin-bottom: 10px;
 }
 
 .cardHome:hover{
