@@ -14,7 +14,7 @@ const black = '#1C2517'
 const Suggested = (props) => {
     return(
     <div className={styles.Holder}>
-        <p className={poppins.className} style={{padding: 5, color:black, fontSize: 14, fontWeight: 600 }}>Dichtstbijzijnde stations</p>
+        <p className={poppins.className} style={{padding: 5, color:black, fontSize: 14, fontWeight: 500 }}>Dichtstbijzijnde stations</p>
             <Card station={props.stations[0]}/>
             <Card station={props.stations[1]}/>
             <Card station={props.stations[2]}/>
