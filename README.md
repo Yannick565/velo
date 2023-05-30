@@ -4,14 +4,15 @@
 
 **`beschrijving`**
 
-Met deze app kan je [Velo](https://www.velo-antwerpen.be/) stations in provincie Antwerpen vanuit jouw locatie binnen een straal van 5km bekijken. 
+Met deze app kan je [Velo](https://www.velo-antwerpen.be/) stations in provincie Antwerpen vanuit jouw locatie binnen een straal van 10km bekijken.
 
->coding advanced 2022 - 2023
+> coding advanced 2022 - 2023
 
 <pre>
 
 
 </pre>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
