@@ -67,8 +67,8 @@ return (
         {station.id ? (
           <Link href={`/stations/${station.id}`}>
             <div className={style.cardHome}>
-              <div >
-              <p  style={{ fontSize: 15 }} className={style.cardStationName}>{station.name.slice(5)}</p>
+              <div className={poppins.className}>
+              <p style={{ fontSize: 15 }} className={style.cardStationName}>{station.name.slice(5)}</p>
               <p style={{ color: black }}>{Math.trunc(station.distance*10)/10} </p>
               </div>
             </div>
