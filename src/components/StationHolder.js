@@ -69,7 +69,7 @@ return (
             <div className={style.cardHome}>
               <div className={poppins.className}>
               <p style={{ fontSize: 15 }} className={style.cardStationName}>{station.name.slice(5)}</p>
-              <p style={{ color: black }}>{Math.trunc(station.distance*10)/10} </p>
+              <p style={{ color: black }}>{Math.trunc(station.distance*10)/10} km</p>
               </div>
             </div>
           </Link>
